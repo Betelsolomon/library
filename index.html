@@ -1,53 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library App Test</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <h1>My Library</h1>
+  <button id="newBookBtn">New Book</button>
   
-    <script>
-      
-        const myLibrary = [];
+  <!-- Modal for Adding New Book -->
+  <div id="formContainer" class="modal">
+    <form id="bookForm">
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" required>
+      <label for="author">Author:</label>
+      <input type="text" id="author" name="author" required>
+      <label for="pages">Pages:</label>
+      <input type="number" id="pages" name="pages" required>
+      <label for="read">Read:</label>
+      <input type="checkbox" id="read" name="read">
+      <button type="submit">Add Book</button>
+      <button type="button" id="closeForm">Cancel</button>
+    </form>
+  </div>
 
-        function book(title , author, pages ,isread ){
-            this.title = title,
-            this.author = author,
-            this.pages = pages,
-            this.isread = isread;
-        };
+  <!-- Display for Books in the Library -->
+  <div id="libraryDisplay"></div>
 
-        book.prototype.info = function() {
-            console.log(` ${this.title} by ${this.author} , ${this.pages} pages, ${this.isread} `);
-        };
-        
-
-       
-        function addBookToLibrary (book) {
-            myLibrary.push(book);
-
-        }
-      
-     
-      
-        const harryPotter= new book('Harry Potter', 'J.K. Rowling ' , 6095 , 'not read yet');
-        const theHobit= new book('The Hobit' , ' J.R.R. Tolkien' , 310 , 'read')
-        addBookToLibrary(harryPotter);
-        addBookToLibrary(theHobit);
-      
-     // myLibrary.forEach(book => console.log(book.info()));
-
-         
-      for(i=0; i<= myLibrary.length; i++) 
-      {
-        console.log(myLibrary[i].info());
-      };
-
-    </script>
-
-
-
-
+  <script src="script.js"></script>
 </body>
 </html>

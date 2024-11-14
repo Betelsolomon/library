@@ -1,0 +1,27 @@
+
+body {
+    font-family: Arial, sans-serif;
+  }
+  #formContainer {
+   
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #333;
+  }
+  .modal.show {
+    display: block;
+  }
+  .card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+  }
+  button {
+    margin: 5px;
+  }
+  
