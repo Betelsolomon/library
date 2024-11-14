@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+</head>
+<body>
+  
+    <script>
+      
+        const myLibrary = [];
+
+        function book(title , author, pages ,isread ){
+            this.title = title,
+            this.author = author,
+            this.pages = pages,
+            this.isread = isread;
+        };
+
+        book.prototype.info = function() {
+            console.log(` ${this.title} by ${this.author} , ${this.pages} pages, ${this.isread} `);
+        };
+        
+
+       
+        function addBookToLibrary (book) {
+            myLibrary.push(book);
+
+        }
+      
+     
+      
+        const harryPotter= new book('Harry Potter', 'J.K. Rowling ' , 6095 , 'not read yet');
+        const theHobit= new book('The Hobit' , ' J.R.R. Tolkien' , 310 , 'read')
+        addBookToLibrary(harryPotter);
+        addBookToLibrary(theHobit);
+      
+     // myLibrary.forEach(book => console.log(book.info()));
+
+         
+      for(i=0; i<= myLibrary.length; i++) 
+      {
+        console.log(myLibrary[i].info());
+      };
+
+    </script>
+
+
+
+
+</body>
+</html>
